@@ -1,0 +1,61 @@
+* {margin:0;padding:0;box-sizing:border-box;}
+body {font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#333;background:#f4f4f4;
+      min-height:100vh;display:flex;flex-direction:column;}
+.navbar {background:#111;color:white;padding:1rem 5%;position:fixed;top:0;width:100%;z-index:1000;
+         display:flex;justify-content:space-between;align-items:center;}
+.logo a {color:white;text-decoration:none;font-size:24px;font-weight:bold;}
+.nav-links {list-style:none;display:flex;}
+.nav-links li {margin:0 15px;}
+.nav-links a {color:white;text-decoration:none;font-size:17px;}
+.nav-links a:hover,.nav-links a.active {color:#00d4ff;}
+
+.hero {height:100vh;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+       url('https://source.unsplash.com/random/1600x900/?coding') center/cover;
+       display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;}
+.hero h1 {font-size:3.5rem;margin-bottom:20px;}
+.hero span {color:#00d4ff;}
+.hero p {font-size:1.3rem;margin:10px 0;max-width:800px;}
+.btn {background:#00d4ff;color:white;padding:12px 30px;border-radius:50px;text-decoration:none;margin-top:20px;}
+
+.container {max-width:1100px;margin:120px auto 50px;padding:0 20px;flex:1;}
+h2 {text-align:center;margin-bottom:40px;font-size:2.4rem;color:#222;}
+
+.profile-section {display:flex;gap:40px;flex-wrap:wrap;justify-content:center;align-items:center;text-align:center;}
+.profile-pic {width:280px;height:280px;border-radius:50%;border:px solid #00d4ff;object-fit:cover;}
+.bio p {max-width:700px;margin:15px auto;font-size:1.1rem;}
+
+.projects-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
+.project-card {background:white;padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.1);text-align:center;}
+.project-card img {width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;}
+.btn-small {background:#333;color:white;padding:8px 20px;border-radius:5px;text-decoration:none;font-size:14px;}
+.project-card-3 {background:white;padding:25px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.1); 
+    text-align:center; object-position: bottom;}
+.project-card-3 img {width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px;object-position: bottom center;}
+.skills-section .skill {margin:40px 0;}
+.skill-name {display:flex;justify-content:space-between;font-weight:bold;font-size:18px;margin-bottom:10px;}
+.progress-bar {background:#ddd;height:35px;border-radius:20px;overflow:hidden;}
+.fill {height:100%;background:#00d4ff;width:0%;transition:width 1s ease;border-radius:20px;}
+
+.goal-box {background:white;padding:30px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.1);margin:30px 0;}
+
+.contact-section form {max-width:600px;margin:0 auto;background:white;padding:30px;border-radius:10px;
+                       box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+.contact-section input,.contact-section textarea {width:100%;padding:12px;margin:10px 0;border:1px solid #ccc;border-radius:5px;font-size:16px;}
+.contact-section textarea {min-height:150px;resize:vertical;}
+
+.footer {background:#111;color:white;text-align:center;padding:30px;margin-top:auto;}
+.social a {color:white;margin:0 15px;font-size:26px;text-decoration:none;}
+.social a:hover {color:#00d4ff;}
+.coming-soon-page { min-height: 100vh; background: #f4f4f4; display: flex; flex-direction: column; justify-content: center;
+    align-items: center; text-align: center; padding: 20px;}
+
+.coming-soon-page h1 { font-size: 3.8rem; color: #00d4ff; margin-bottom: 20px;}
+.coming-soon-page p { font-size: 1.5rem; max-width: 700px; margin: 30px 0; color: #333 }
+.coming-soon-page .btn { padding: 15px 40px; font-size: 1.2rem;}
+
+@media (max-width:768px){
+  .navbar {flex-direction:column;padding:1rem;}
+  .nav-links {margin-top:15px;}
+  .nav-links li {margin:0 10px;}
+  .hero h1 {font-size:2.5rem;}
+}

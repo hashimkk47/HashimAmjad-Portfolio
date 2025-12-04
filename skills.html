@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hashim Amjad - Skills</title>
+  <link rel="icon" type="image/png" href="images/FAST_LOGO.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">HASHIM AMJAD</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="careergoal.html">Career Goals</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="contactus.html">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <div class="container skills-section">
+    <h2>My Technical Skills</h2>
+
+    <div class="skill">
+      <div class="skill-name">Python <span>90%</span></div>
+      <div class="progress-bar"><div class="fill" data-skill="python"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">C++ <span>85%</span></div>
+      <div class="progress-bar"><div class="fill" data-skill="cpp"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">HTML/CSS <span>80%</span></div>
+      <div class="progress-bar"><div class="fill" data-skill="htmlcss"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">JavaScript <span>60%</span></div>
+      <div class="progress-bar"><div class="fill" data-skill="js"></div></div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Hashim Amjad. All rights reserved.</p>
+    <div class="social">
+      <a href="https://github.com/hashimkk47" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/hashim-amjad047" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="contact.html"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener("scroll", function() {
+      document.querySelectorAll(".fill").forEach(bar => {
+        if (bar.getBoundingClientRect().top < window.innerHeight - 100) {
+          let percent = bar.parentElement.previousElementSibling.querySelector("span").innerText;
+          let skill = bar.getAttribute("data-skill");
+
+          // Different color for each skill
+          if (skill === "python") bar.style.background = "#3572A5";     // Python blue
+          if (skill === "cpp")    bar.style.background = "#004482";     // C++ dark blue
+          if (skill === "htmlcss") bar.style.background = "#E44D26";   // HTML orange
+          if (skill === "js")     bar.style.background = "#F0DB4F";     // JavaScript yellow
+
+          bar.style.width = percent;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
