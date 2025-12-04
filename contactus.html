@@ -1,48 +1,69 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-    <title>HASHIM AMJAD </title>
-    <link rel="icon" type="image/png" href="images/FAST_LOGO.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Me | Hashim Amjad</title>
+<link rel="icon" type="image/png" href="images/FAST_LOGO.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
 <body>
 
-  <nav class="navbar">
-      <div class="logo"><a href="profile.html">HASHIM AMJAD</a></div>
-      <ul class="nav-links">
-          <li><a href="index.html" >Home</a></li>
-          <li><a href="profile.html">Personal Profile</a></li>
-          <li><a href="careergoal.html">Career Goals</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="contactus.html"class="active">Contact Me</a></li>
-      </ul>
-  </nav>
+<nav class="navbar">
+  <div class="logo"><a href="profile.html">HASHIM AMJAD</a></div>
+  <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Personal Profile</a></li>
+      <li><a href="careergoal.html">Career Goals</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contactus.html" class="active">Contact Me</a></li>
+  </ul>
+</nav>
 
-  <div class="container contact-section">
-    <h2>Contact Me</h2>
+<div class="container contact-section">
+  <h2>Contact Me</h2>
+  <p style="text-align:center;">Send me a message using the form below or directly via email.</p>
 
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <input type="text" id="subject" placeholder="Subject">
-      <textarea id="message" rows="6" placeholder="Your Message (at least 10 characters)" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+  <form id="contactForm" action="https://formsubmit.co/i250814@isb.nu.edu.pk" method="POST">
+    <input type="text" name="name" id="name" placeholder="Your Name" required>
+    <input type="email" name="email" id="email" placeholder="Your Email" required>
+    <input type="text" name="subject" id="subject" placeholder="Subject">
+    <textarea name="message" id="message" rows="6" placeholder="Your Message (at least 10 characters)" required></textarea>
 
-    <div style="text-align:center;margin-top:30px;">
-      <p>Email: i250814@isb.nu.edu.pk</p>
-    </div>
+    <input type="hidden" name="_next" value="https://yourusername.github.io/College-Student-Portfolio/thankyou.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none">
+
+    <button type="submit" class="btn">Send Message</button>
+</form>
+
+
+  <div style="text-align:center;margin-top:30px;">
+    <p>Email: <a href="mailto:i250814@isb.nu.edu.pk">i250814@isb.nu.edu.pk</a></p>
   </div>
+</div>
 
-  <footer class="footer">
-    <p>© 2025 Hashim Amjad. All rights reserved.</p>
-    <div class="social">
-      <a href="https://github.com/hashimkk47" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/hashim-amjad047" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="contactus.html"><i class="fas fa-envelope"></i></a>
-    </div>
-  </footer>
+<footer class="footer">
+  <p>© 2025 Hashim Amjad. All rights reserved.</p>
+  <div class="social">
+    <a href="https://github.com/hashimkk47" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/hashim-amjad047" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:i250814@isb.nu.edu.pk"><i class="fas fa-envelope"></i></a>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e) {
+      const message = document.getElementById('message').value.trim();
+      if(message.length < 10) {
+          e.preventDefault();
+          alert('Message must be at least 10 characters long.');
+      }
+  });
+</script>
+
+</body>
+</html>
